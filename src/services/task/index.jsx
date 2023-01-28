@@ -10,7 +10,7 @@ export const getTasks = async () => {
   return waitFor(tasks);
 };
 
-export const addTasks = async (task) => {
+export const addTask = async (task) => {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));

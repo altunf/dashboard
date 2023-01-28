@@ -4,6 +4,10 @@ import { HomePage } from "../pages/home-page";
 import { MainLayout } from "../layouts/main-layout";
 
 import { TasksPage, tasksPageLoader } from "../pages/tasks-page";
+import {
+  CreateTaskPage,
+  createTaskPageSubmitAction,
+} from "../pages/create-task-page";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +21,11 @@ export const router = createBrowserRouter([
         path: "/tasks",
         element: <TasksPage />,
         loader: tasksPageLoader,
+      },
+      {
+        path: "/tasks/create",
+        element: <CreateTaskPage />,
+        action: createTaskPageSubmitAction,
       },
     ],
   },
