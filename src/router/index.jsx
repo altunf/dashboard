@@ -9,6 +9,12 @@ import {
   createTaskPageSubmitAction,
 } from "../pages/create-task-page";
 
+import {
+  TaskDetailPage,
+  taskDetailPageLoader,
+  updateTaskDetailAction,
+} from "../pages/task-detail-page";
+
 export const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -26,6 +32,12 @@ export const router = createBrowserRouter([
         path: "/tasks/create",
         element: <CreateTaskPage />,
         action: createTaskPageSubmitAction,
+      },
+      {
+        path: "/tasks/:id",
+        element: <TaskDetailPage />,
+        loader: taskDetailPageLoader,
+        action: updateTaskDetailAction,
       },
     ],
   },

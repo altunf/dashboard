@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const TasksPageContainer = styled.section`
   display: flex;
@@ -16,7 +16,7 @@ export const TasksList = styled.ul`
 
 export const TaskListItem = styled.li``;
 
-export const Task = styled(Link)`
+export const Task = styled(NavLink)`
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
@@ -35,7 +35,7 @@ export const TaskCompleted = styled.p`
   font-size: var(--font-s);
 `;
 
-export const Button = styled(Link)`
+export const Button = styled(NavLink)`
   background-color: var(--green);
   color: var(--dark-blue);
   padding: var(--space-m) var(--space-xl);
