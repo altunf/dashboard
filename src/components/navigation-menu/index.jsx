@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./styles";
-import { RxDashboard } from "react-icons/rx";
 import { MENU } from "./constants";
 
 function NavigationMenu() {
