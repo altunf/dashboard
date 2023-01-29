@@ -15,6 +15,12 @@ import {
   updateTaskDetailAction,
 } from "../pages/task-detail-page";
 
+import {
+  TaskEditPage,
+  taskEditPageLoader,
+  updateTaskAction,
+} from "../pages/task-edit-page";
+
 export const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -38,6 +44,12 @@ export const router = createBrowserRouter([
         element: <TaskDetailPage />,
         loader: taskDetailPageLoader,
         action: updateTaskDetailAction,
+      },
+      {
+        path: "/tasks/:id/edit",
+        element: <TaskEditPage />,
+        loader: taskEditPageLoader,
+        action: updateTaskAction,
       },
     ],
   },
