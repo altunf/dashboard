@@ -1,9 +1,10 @@
 import * as S from "./styles";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 
 function Main() {
+  const navigation = useNavigation();
   return (
-    <S.Main>
+    <S.Main isLoading={navigation.state !== "idle"}>
       <Outlet />
     </S.Main>
   );

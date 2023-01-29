@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Form, Link } from "react-router-dom";
+import { Form, NavLink } from "react-router-dom";
 
 export const TaskEditPageContainer = styled.section``;
 
@@ -22,7 +22,7 @@ export const Title = styled.h2`
   font-size: var(--font-xl);
 `;
 
-export const BackButton = styled(Link)`
+export const BackButton = styled(NavLink)`
   background-color: var(--dark-blue);
   padding: var(--space-m);
   border-radius: var(--border-radius-s);
